@@ -27,6 +27,22 @@ namespace PraktikumADO
                "Data Source=siptea-lt\\FAR;Initial Catalog=DBAkademikADO;Integrated Security=True"  
             );
         }
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Connection();
+                conn.Open();
+                MessageBox.Show("Koneksi ke database Berhasil");
+
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         
     }
 }
