@@ -20,6 +20,13 @@ namespace PraktikumADO
             InitializeComponent();
         }
 
-       
+        private void Connection()
+        {
+            conn = new SqlConnection(
+               "Data Source=siptea-lt\\FAR;Initial Catalog=DBAkademikADO;Integrated Security=True"
+            );
+        }
+
+        
     }
 }
